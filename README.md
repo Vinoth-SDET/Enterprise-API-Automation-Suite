@@ -1,6 +1,6 @@
 # 🚀 API Automation Framework
 
-![API Automation Tests](https://github.com/Vinoth-AutomationQA/api-automation-restassured-ci/actions/workflows/api-tests.yml/badge.svg)
+[![API Automation Tests](https://github.com/Vinoth-AutomationQA/api-automation-restassured-ci/actions/workflows/api_test.yml/badge.svg)](https://github.com/Vinoth-AutomationQA/api-automation-restassured-ci/actions/workflows/api_test.yml)
 ![Java](https://img.shields.io/badge/Java-21-orange?logo=java)
 ![RestAssured](https://img.shields.io/badge/RestAssured-5.4.0-green)
 ![TestNG](https://img.shields.io/badge/TestNG-7.9.0-red)
