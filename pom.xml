@@ -20,7 +20,7 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <!-------- Dependency versions -------->
+        <!-- Dependency versions -->
         <restassured.version>5.4.0</restassured.version>
         <testng.version>7.9.0</testng.version>
         <allure.version>2.27.0</allure.version>
@@ -209,5 +209,6 @@
     </build>
 
 </project>
+
 
 
