@@ -6,13 +6,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.vinoth.api</groupId>
-    <artifactId>api-automation-restassured-ci</artifactId>
+    <artifactId>enterprise-api-automation-suite</artifactId>
     <version>2.0.0</version>
     <packaging>jar</packaging>
 
     <name>API Automation Framework</name>
     <description>Enterprise-grade REST API automation framework — RestAssured + TestNG + Allure + Log4j2</description>
-    <url>https://github.com/Vinoth-SDET/api-automation-restassured-ci</url>
+    <url>https://github.com/Vinoth-SDET/Enterprise-API-Automation-Suite</url>
 
     <properties>
         <java.version>21</java.version>
@@ -212,5 +212,6 @@
 
         </plugins>
     </build>
+
 
 </project>
