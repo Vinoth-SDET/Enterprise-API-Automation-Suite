@@ -62,15 +62,10 @@
 
         <!-- ── Reporting ───────────────────────────────────────────── -->
         <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-testng</artifactId>
-            <version>${allure.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-rest-assured</artifactId>
-            <version>${allure.version}</version>
-        </dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.1.1</version>
+        </dependency>L̥
 
         <!-- ── JSON Serialisation ──────────────────────────────────── -->
         <dependency>
@@ -215,3 +210,4 @@
 
 
 </project>
+
