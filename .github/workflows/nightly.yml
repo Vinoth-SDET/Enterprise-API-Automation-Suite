@@ -2,15 +2,15 @@ name: Nightly Regression - API Automation Suite
 
 on:
   schedule:
-    - cron: '0 0 * * *'    # midnight UTC every day
-  workflow_dispatch:         # allow manual trigger from Actions tab
+    - cron: '30 23 * * *'   # 23:30 UTC = 05:30 AM IST every day
+  workflow_dispatch:          # allow manual trigger from Actions tab
 
 jobs:
   nightly-regression:
     name: Regression — ${{ matrix.env }} / ${{ matrix.suite }}
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false       # run all matrix combinations even if one fails
+      fail-fast: false
       matrix:
         env:   [dev, qa, staging]
         suite: [regression, contract, negative]
@@ -24,7 +24,7 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-          cache: maven          # cuts build time ~60%
+          cache: maven
 
       - name: Run ${{ matrix.suite }} on ${{ matrix.env }}
         run: |
@@ -39,7 +39,7 @@ jobs:
           STAGING_AUTH_TOKEN: ${{ secrets.STAGING_AUTH_TOKEN }}
 
       - name: Upload Allure results
-        if: always()           # upload even on test failures
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-nightly-${{ matrix.env }}-${{ matrix.suite }}
@@ -58,7 +58,7 @@ jobs:
     name: Publish Allure report to GitHub Pages
     needs: nightly-regression
     runs-on: ubuntu-latest
-    if: always()               # publish even if some matrix jobs failed
+    if: always()
 
     steps:
       - name: Checkout repository
