@@ -11,7 +11,7 @@
 
 If you discover a security vulnerability in this framework, please do **not** open a public GitHub issue.
 
-Email: vinoth.sdet.security@gmail.com
+Email: vinoth.sdet@outlook.com
 
 Please include:
 - Description of the vulnerability

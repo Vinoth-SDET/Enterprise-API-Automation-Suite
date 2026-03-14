@@ -12,7 +12,7 @@
 [![Tests](https://img.shields.io/badge/Tests-30%20Passing-success?logo=checkmarx)](https://github.com/Vinoth-SDET/Enterprise-API-Automation-Suite/actions)
 [![Coverage](https://img.shields.io/badge/Coverage-CRUD%20%7C%20Contract%20%7C%20Negative-informational)](https://github.com/Vinoth-SDET/Enterprise-API-Automation-Suite)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](Dockerfile)
-[![Dependabot](https://img.shields.io/badge/Dependabot-Enabled-025E8C?logo=dependabot&logoColor=white)](.github/Dependabot.yml)
+[![Dependabot](https://img.shields.io/badge/Dependabot-Enabled-025E8C?logo=dependabot&logoColor=white)](.github/dependabot.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 <br/>
@@ -314,13 +314,13 @@ public class GetUserTests extends BaseTest {
         Response response = userService.getUserById(1);
 
         UserResponse user = ResponseValidator.of(response)
-            .hasStatus(HttpStatus.OK)            // named constant, not magic 200
-            .hasContentTypeJson()
-            .bodyFieldEquals("id", 1)
-            .bodyFieldNotNull("name")
-            .bodyMatchesSchema("user-response-schema.json")  // contract check
-            .respondsWithin(EXTERNAL_API_SLA_MS)              // named SLA
-            .as(UserResponse.class);                          // typed deserialisation
+                .hasStatus(HttpStatus.OK)            // named constant, not magic 200
+                .hasContentTypeJson()
+                .bodyFieldEquals("id", 1)
+                .bodyFieldNotNull("name")
+                .bodyMatchesSchema("user-response-schema.json")  // contract check
+                .respondsWithin(EXTERNAL_API_SLA_MS)              // named SLA
+                .as(UserResponse.class);                          // typed deserialisation
 
         assertThat(user.getName()).isNotBlank();
         assertThat(user.getEmail()).contains("@");
@@ -469,7 +469,7 @@ See [CHANGELOG.md](CHANGELOG.md) for a full version history with all fixes and a
 **Vinoth M** — Staff SDET | Test Automation Architect | 11+ years across BFSI, Healthcare, SaaS
 
 [![GitHub](https://img.shields.io/badge/GitHub-Vinoth--SDET-181717?logo=github&logoColor=white)](https://github.com/Vinoth-SDET)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-vinoth--m--qa-0A66C2?logo=linkedin&logoColor=white)](https://linkedin.com/in/vinoth-m-qa)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-vinoth--m--qa-0A66C2?logo=linkedin&logoColor=white)](https://linkedin.com/in/vinoth-sdet)
 
 ---
 
