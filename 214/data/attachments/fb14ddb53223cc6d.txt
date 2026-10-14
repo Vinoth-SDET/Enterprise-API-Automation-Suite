@@ -1,5 +1,0 @@
-[Response time 8189ms exceeded SLA threshold of 8000ms] 
-Expecting actual:
-  8189L
-to be less than:
-  8000L 
